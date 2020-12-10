@@ -1,0 +1,48 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+.mini {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin: 50px 10px;
+    border: 50px solid transparent;
+    vertical-align: top;
+}
+.bg(@j,@color) {
+    border-@{j}-color: @color;
+}
+
+
+em {
+    .mini;
+}
+em:nth-child(1) {
+    .bg(right, red);
+}
+em:nth-child(2) {
+    border-width: 30px;
+    .bg(right, blue);
+}
+em:nth-child(3){
+    .bg(top, red);
+}
+em:nth-child(4){
+    border-width: 30px;
+    .bg(top, black);
+}
+em:nth-child(5){
+    .bg(left, red);
+}
+em:nth-child(6){
+    border-width: 30px;
+    .bg(left, blue);
+}
+em:nth-child(7){
+    .bg(bottom, red);
+}
+em:nth-child(8){
+    border-width: 30px;
+    .bg(bottom, blue)
+}
